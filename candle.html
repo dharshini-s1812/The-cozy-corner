@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Corner</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="styles.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+ </head>
+ <body>
+    
+    
+<!--nav bar--->
+<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+  <!--title -->
+  <div class="flex items-center gap-4">
+    <img src="logo.png" alt="Logo" class="w-full h-12 shadow-md">
+  </div>
+
+  <!--nav-->
+  <nav class="hidden md:flex gap-5 items-center text-[#1d1b19] font-medium">
+    <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
+    <a href="plants.html" class="hover:text-[#7a3e2e]">Plants</a>
+    <a href="candle.html" class="hover:text-[#7a3e2e]">Candle & Lamps</a>
+    <a href="festive.html" class="hover:text-[#7a3e2e]">Festive</a>
+  </nav>
+
+<div class="flex gap-3">
+  <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
+    <img src="cart.png" alt="Icon" class="w-8 h-8 object-cover">
+  </button>
+  <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
+    <img src="liked.png" alt="Icon" class="w-8 h-8 object-cover">
+  </button>
+</div>
+
+
+
+
+  <!-- Mobile Menu Button -->
+  <button id="mobileMenuBtn" class="md:hidden ml-4 text-xl">
+    ☰
+  </button>
+  
+</header>
+<section class="w-full bg-white py-6 overflow-hidden">
+   <div class="mt-7 flex items-center justify-center">
+    
+    <div class="relative w-full overflow-hidden">
+      <!-- Scroll Container -->
+      <div class="flex animate-scroll whitespace-nowrap">
+        <!-- Logos (repeat for seamless looping) -->
+        <img src="Banner_1.png" alt="Partner 1" class="h-20 mx-10">
+        <img src="Banner_2.png" alt="Partner 2" class="h-20 mx-10">
+        <img src="Banner_3.png" alt="Partner 3" class="h-20 mx-10">
+        <img src="Banner_4.png" alt="Partner 4" class="h-20 mx-10">
+    </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-scroll {
+      display: inline-flex;
+      animation: scroll 25s linear infinite;
+    }
+  </style>
+</section>
+  
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 text-[#1d1b19] dark:text-gray-200 px-6 py-4 flex flex-col gap-4">
+  <a href="index.html" class="hover:text-[#7a3e2e] ">Home</a>
+  <a href="#categories" class="hover:text-[#7a3e2e]">Categories</a>
+  <a href="#about" class="hover:text-[#7a3e2e]">About</a>
+  <a href="#contact" class="hover:text-[#7a3e2e]">Contact</a>
+</div>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <!--row1-->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Product Card 1 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="candle_4.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Handcrafted Wooden Vase</h3>
+      <p class="text-gray-700 mb-4">Elegant natural wood finish perfect for decor.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹1,299</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+      <div class="flex gap-3 mt-4 justify-center">
+            <button class="rounded-full overflow-hidden hover:scale-105 transition-transform mr-1">
+                <img src="cart.png" alt="Icon" class="w-12 h-12 object-cover">
+            </button>
+            <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
+                <img src="liked.png" alt="Icon" class="w-12 h-12 object-cover">
+            </button>
+        </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="candle_5.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Ceramic Lavender Pot</h3>
+      <p class="text-gray-700 mb-4">Smooth ceramic pot with pastel lavender glaze.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹899</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="candle_6.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Vintage Candle Holder</h3>
+      <p class="text-gray-700 mb-4">Handmade lavender-themed candle holder.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹699</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--row2-->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Product Card 1 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="candle_7.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Handcrafted Wooden Vase</h3>
+      <p class="text-gray-700 mb-4">Elegant natural wood finish perfect for decor.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹1,299</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="lamp_1.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Ceramic Lavender Pot</h3>
+      <p class="text-gray-700 mb-4">Smooth ceramic pot with pastel lavender glaze.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹899</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="lamp_2.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Vintage Candle Holder</h3>
+      <p class="text-gray-700 mb-4">Handmade lavender-themed candle holder.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹699</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--row3-->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Product Card 1 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="lamp_3.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Handcrafted Wooden Vase</h3>
+      <p class="text-gray-700 mb-4">Elegant natural wood finish perfect for decor.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹1,299</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="lamp_4.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Ceramic Lavender Pot</h3>
+      <p class="text-gray-700 mb-4">Smooth ceramic pot with pastel lavender glaze.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹899</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="lamp_5.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Vintage Candle Holder</h3>
+      <p class="text-gray-700 mb-4">Handmade lavender-themed candle holder.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹699</div>
+      <div style="display: inline-block; width: 100%; gap: 10px;">
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
+        Add to Cart
+      </button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
+        Buy Now
+      </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+ </body>
+ </html>
