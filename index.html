@@ -28,34 +28,32 @@
   </style>
 </head>
 <body class="bg-[#c9bdb9]">
-
-<!-- Navbar -->
-<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-6 py-4 flex items-center justify-between sticky top-0 z-50" data-aos="fade-down">
-  <div class="flex items-center gap-4">
-    <img src="logo.png" alt="Logo" class="w-full h-12 shadow-md">
+<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-4 sm:px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+  <div class="flex items-center gap-3">
+    <img src="logo.png" alt="Logo" class="h-10 sm:h-12 w-auto" />
   </div>
+
+  <!-- Desktop Nav -->
   <nav class="hidden md:flex gap-5 items-center text-[#1d1b19] font-medium">
-    <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
+    <a href="#home" class="hover:text-[#7a3e2e]">Home</a>
     <a href="#categories" class="hover:text-[#7a3e2e]">Categories</a>
     <a href="#About" class="hover:text-[#7a3e2e]">About</a>
     <a href="#contact" class="hover:text-[#7a3e2e]">Contact</a>
   </nav>
-  <div class="flex gap-3">
-    <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
-      <img src="cart.jpg" alt="Icon" class="w-8 h-8 object-cover">
-    </button>
-    <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
-      <img src="liked.jpg" alt="Icon" class="w-8 h-8 object-cover">
-    </button>
+
+  <!-- Icons -->
+  <div class="flex items-center gap-3">
+    <button class="text-gray-500 hover:text-red-500 text-2xl">❤️</button>
+    <button class="text-gray-500 hover:text-[#7a3e2e] text-2xl">🛒</button>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl focus:outline-none">☰</button>
   </div>
-  <button id="mobileMenuBtn" class="md:hidden ml-4 text-xl">☰</button>
 </header>
 
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden md:hidden bg-white text-[#1d1b19] px-6 py-4 flex flex-col gap-4" data-aos="fade-down">
-  <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
+<div id="mobileMenu" class="hidden md:hidden bg-white text-[#1d1b19] px-6 py-4 flex flex-col gap-4 shadow-md">
+  <a href="#home" class="hover:text-[#7a3e2e]">Home</a>
   <a href="#categories" class="hover:text-[#7a3e2e]">Categories</a>
-  <a href="#about" class="hover:text-[#7a3e2e]">About</a>
+  <a href="#About" class="hover:text-[#7a3e2e]">About</a>
   <a href="#contact" class="hover:text-[#7a3e2e]">Contact</a>
 </div>
 
@@ -221,22 +219,33 @@
      <div class="w-full flex items-center justify-between mb-6"> 
       <h1 class="text-2xl font-semibold text-[#5b3e82]">LOVE WHERE YOU LIVE</h1> 
       <button class="px-5 py-2 border border-[#bfa0ff] rounded-full text-sm text-[#5b3e82] bg-white hover:bg-[#e9d7ff] transition shadow"> 
-        VIEW ALL COLLECTIONS </button> </div> <!-- Collections Grid --> <div class="grid grid-cols-3 grid-rows-2 gap-4 w-full"> 
-          <!-- plant (Large) --> <a href="plants.html"class="row-span-2 rounded-xl overflow-hidden shadow group relative"> 
+        VIEW ALL COLLECTIONS </button> </div>
+         <!-- Collections Grid --> 
+          <div class="grid grid-cols-3 grid-rows-2 gap-4 w-full"> 
+          <!-- plant (Large) -->
+            <a href="plants.html"class="row-span-2 rounded-xl overflow-hidden shadow group relative"> 
             <img src="plants.jpg" alt="Seating" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
             <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">PLANTS</span> 
-            </a> <!-- clay --> <a href="clay.html" class="rounded-xl overflow-hidden shadow group relative"> 
+            </a>
+             <!-- clay --> 
+              <a href="clay.html" class="rounded-xl overflow-hidden shadow group relative"> 
             <img src="clays.jpg" alt="Tables" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
-            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">CLAYS</span> 
-          </a> <!-- lamp --> <a href="candle.html" class="rounded-xl overflow-hidden shadow group relative"> 
+            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">CLAY PRODUCTS</span> 
+          </a>
+           <!-- lamp -->
+             <a href="candle.html" class="rounded-xl overflow-hidden shadow group relative"> 
             <img src="candles.jpg" alt="Lighting" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
             <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">CANDLES & LAMPS</span> 
-          </a> <!-- wall --> <a href="wall.html" class="rounded-xl overflow-hidden shadow group relative"> 
-            <img src="walls.jpg" alt="Accessories" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
-            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">WALL HANGINGS</span> 
-          </a> <!-- festive --> <a href="festive.html" class="rounded-xl overflow-hidden shadow group relative"> 
-            <img src="festives.jpg" alt="Lighting" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
-            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">FESTIVE COLLECTION</span>
+          </a>
+           <!-- wall --> 
+            <a href="walls.html" class="rounded-xl overflow-hidden shadow group relative"> 
+            <img src="mirrors.jpg" alt="Accessories" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
+            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">MODERN MIRRORS</span> 
+          </a
+          > <!-- festive -->
+           <a href="festive.html" class="rounded-xl overflow-hidden shadow group relative"> 
+            <img src="shelfs.jpg" alt="Lighting" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
+            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">WALL SHELVES</span>
            </a> 
       </div> 
     </div> 
@@ -344,17 +353,17 @@
 </footer>
 
 <!-- Scripts -->
-<script src="script.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 1000, // animation duration
-    once: true, // animation happens only once
-  });
+  AOS.init({ duration: 800, once: true });
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  mobileMenuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
 </script>
+
 </body>
 </html>
-
 
 
 
