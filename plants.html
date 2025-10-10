@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cozy Corner - Plants</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-[Poppins] bg-white">
+
+<!-- Navbar -->
+<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+  <div class="flex items-center gap-4">
+    <img src="logo.png" alt="Logo" class="w-full h-12 shadow-md">
+  </div>
+
+  <nav class="hidden md:flex gap-5 items-center text-[#1d1b19] font-medium">
+    <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
+    <a href="plants.html" class="hover:text-[#7a3e2e]">Plants</a>
+    <a href="candle.html" class="hover:text-[#7a3e2e]">Candle & Lamps</a>
+    <a href="wall.html" class="hover:text-[#7a3e2e]">Wall Hanging</a>
+    <a href="clay.html" class="hover:text-[#7a3e2e]">Clays</a>
+    <a href="festive.html" class="hover:text-[#7a3e2e]">Festive</a>
+
+  </nav>
+
+
+  
+
+  <div class="flex gap-3">
+    <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
+      <img src="cart.png" alt="Cart" class="w-8 h-8 object-cover">
+    </button>
+    <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
+      <img src="liked.png" alt="Wishlist" class="w-8 h-8 object-cover">
+    </button>
+  </div>
+
+  <button id="mobileMenuBtn" class="md:hidden ml-4 text-xl">☰</button>
+</header>
+
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      display: inline-flex;
+      animation: scroll 25s linear infinite;
+    }
+  </style>
+</section>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white px-6 py-4 flex flex-col gap-4">
+  <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
+  <a href="#categories" class="hover:text-[#7a3e2e]">Categories</a>
+  <a href="#about" class="hover:text-[#7a3e2e]">About</a>
+  <a href="#contact" class="hover:text-[#7a3e2e]">Contact</a>
+</div>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- 🌿 Plant Collection -->
+
+
+<!-- Row 1 -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant1.jpg" alt="Aloe Vera Plant" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Aloe Vera in Ceramic Pot</h3>
+      <p class="text-gray-700 mb-4">Low-maintenance indoor plant with air-purifying qualities.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹499</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant_2.jpg" alt="Succulent Garden" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Mini Succulent Garden</h3>
+      <p class="text-gray-700 mb-4">Aesthetic mix of tiny succulents in a lavender-toned pot.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹799</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant_3.jpg" alt="Bonsai Tree" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Ficus Bonsai Tree</h3>
+      <p class="text-gray-700 mb-4">Symbol of balance and harmony — perfect for desks or tables.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹1,299</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Row 2 -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant_4.jpg" alt="Hanging Plant" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Hanging Ivy Plant</h3>
+      <p class="text-gray-700 mb-4">Lush trailing leaves that bring freshness to any space.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹899</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant_5.jpg" alt="Cactus Set" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Cactus Trio Set</h3>
+      <p class="text-gray-700 mb-4">Three adorable cacti in minimal pastel pots for easy care.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹649</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant_6.jpg" alt="Peace Lily" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Peace Lily Plant</h3>
+      <p class="text-gray-700 mb-4">Beautiful air-purifying plant with elegant white blooms.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹999</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Row 3 -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant_7.jpg" alt="Snake Plant" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Snake Plant</h3>
+      <p class="text-gray-700 mb-4">Ideal for bedrooms — releases oxygen at night.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹749</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant_8.jpg" alt="Lavender Pot" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Lavender Bloom Pot</h3>
+      <p class="text-gray-700 mb-4">Soothing lavender plant that adds calmness to your decor.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹1,099</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+      <img src="plant_9.jpg" alt="Fern Pot" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Boston Fern in Beige Pot</h3>
+      <p class="text-gray-700 mb-4">Classic lush fern that thrives indoors with minimal care.</p>
+      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹899</div>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full mb-2">Add to Cart</button>
+      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl w-full">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
