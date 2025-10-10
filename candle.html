@@ -9,44 +9,48 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+<!-- AOS Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
  </head>
  <body>
     
     
 <!--nav bar--->
-<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-6 py-4 flex items-center justify-between sticky top-0 z-50">
-  <!--title -->
-  <div class="flex items-center gap-4">
-    <img src="logo.png" alt="Logo" class="w-full h-12 shadow-md">
+
+<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-4 sm:px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+  <div class="flex items-center gap-3">
+    <img src="logo.png" alt="Logo" class="h-10 sm:h-12 w-auto" />
   </div>
 
-  <!--nav-->
+  <!-- Desktop Nav -->
   <nav class="hidden md:flex gap-5 items-center text-[#1d1b19] font-medium">
-    <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
-    <a href="plants.html" class="hover:text-[#7a3e2e]">Plants</a>
-    <a href="candle.html" class="hover:text-[#7a3e2e]">Candle & Lamps</a>
-    <a href="festive.html" class="hover:text-[#7a3e2e]">Festive</a>
+    <a href="index.html" class="hover:text-[#7a3e2e]">Home•</a>
+    <a href="festive.html" class="hover:text-[#7a3e2e]">Wall Shelves•</a>
+    <a href="clay.html" class="hover:text-[#7a3e2e]">Clay Products•</a>
+    <a href="walls.html" class="hover:text-[#7a3e2e]">Modern Mirrors•</a>
+    <a href="plants.html" class="hover:text-[#7a3e2e]">Plants•</a>
   </nav>
 
-<div class="flex gap-3">
-  <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
-    <img src="cart.png" alt="Icon" class="w-8 h-8 object-cover">
-  </button>
-  <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
-    <img src="liked.png" alt="Icon" class="w-8 h-8 object-cover">
-  </button>
+  <!-- Icons -->
+  <div class="flex items-center gap-3">
+    <button class="text-gray-500 hover:text-red-500 text-2xl">❤️</button>
+    <button class="text-gray-500 hover:text-[#7a3e2e] text-2xl">🛒</button>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl focus:outline-none">☰</button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white text-[#1d1b19] px-6 py-4 flex flex-col gap-4 shadow-md">
+    <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
+    <a href="festive.html" class="hover:text-[#7a3e2e]">Wall Shelves</a>
+    <a href="clay.html" class="hover:text-[#7a3e2e]">Clay Products</a>
+    <a href="walls.html" class="hover:text-[#7a3e2e]">Modern Mirrors</a>
+    <a href="plants.html" class="hover:text-[#7a3e2e]">Plants</a>
+  
 </div>
 
 
-
-
-  <!-- Mobile Menu Button -->
-  <button id="mobileMenuBtn" class="md:hidden ml-4 text-xl">
-    ☰
-  </button>
-  
-</header>
 <section class="w-full bg-white py-6 overflow-hidden">
    <div class="mt-7 flex items-center justify-center">
     
@@ -76,13 +80,7 @@
 </section>
   
 
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 text-[#1d1b19] dark:text-gray-200 px-6 py-4 flex flex-col gap-4">
-  <a href="index.html" class="hover:text-[#7a3e2e] ">Home</a>
-  <a href="#categories" class="hover:text-[#7a3e2e]">Categories</a>
-  <a href="#about" class="hover:text-[#7a3e2e]">About</a>
-  <a href="#contact" class="hover:text-[#7a3e2e]">Contact</a>
-</div>
+
 
 <script>
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -92,174 +90,502 @@
     mobileMenu.classList.toggle('hidden');
   });
 </script>
+<!--row1-->
 <section class="max-w-7xl mx-auto px-6 py-12">
-  <!--row1-->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+
     <!-- Product Card 1 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="candle_4.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Handcrafted Wooden Vase</h3>
-      <p class="text-gray-700 mb-4">Elegant natural wood finish perfect for decor.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹1,299</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <!-- Wishlist Heart -->
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="candle_1.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Forest Dew Candle</h3>
+      <p class="text-gray-700 mb-3">Captures the essence of rain-soaked woods and green moss.</p>
+
+      <!-- ⭐ Rating -->
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐☆</span>
+        <span class="text-sm text-gray-600 ml-2">(4.0)</span>
       </div>
-      <div class="flex gap-3 mt-4 justify-center">
-            <button class="rounded-full overflow-hidden hover:scale-105 transition-transform mr-1">
-                <img src="cart.png" alt="Icon" class="w-12 h-12 object-cover">
-            </button>
-            <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
-                <img src="liked.png" alt="Icon" class="w-12 h-12 object-cover">
-            </button>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹149</div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
         </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
     </div>
 
     <!-- Product Card 2 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="candle_5.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Ceramic Lavender Pot</h3>
-      <p class="text-gray-700 mb-4">Smooth ceramic pot with pastel lavender glaze.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹899</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="candle_2.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Amber Glow Candle</h3>
+      <p class="text-gray-700 mb-3">Amber and honey tones that create a warm, cozy atmosphere</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(5.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹189</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
       </div>
     </div>
 
     <!-- Product Card 3 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="candle_6.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Vintage Candle Holder</h3>
-      <p class="text-gray-700 mb-4">Handmade lavender-themed candle holder.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹699</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="candle_3.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Dreamy Aura Candle</h3>
+      <p class="text-gray-700 mb-3">Calming and elegant — a blend of lavender and white musk.</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐☆</span>
+        <span class="text-sm text-gray-600 ml-2">(4.3)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹699</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
       </div>
     </div>
+
   </div>
 </section>
-
 <!--row2-->
 <section class="max-w-7xl mx-auto px-6 py-12">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+
     <!-- Product Card 1 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="candle_7.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Handcrafted Wooden Vase</h3>
-      <p class="text-gray-700 mb-4">Elegant natural wood finish perfect for decor.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹1,299</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <!-- Wishlist Heart -->
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="candle_4.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Sandal Serenity Candle</h3>
+      <p class="text-gray-700 mb-3">A warm blend of sandalwood and amber that grounds your soul..</p>
+
+      <!-- ⭐ Rating -->
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐☆</span>
+        <span class="text-sm text-gray-600 ml-2">(4.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹299</div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
       </div>
     </div>
 
     <!-- Product Card 2 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="lamp_1.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Ceramic Lavender Pot</h3>
-      <p class="text-gray-700 mb-4">Smooth ceramic pot with pastel lavender glaze.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹899</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="candle_5.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Serene Meadow Candle</h3>
+      <p class="text-gray-700 mb-3">Experience the fragrance of wild lavender fields under the morning sun.</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(5.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹199</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
       </div>
     </div>
 
     <!-- Product Card 3 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="lamp_2.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Vintage Candle Holder</h3>
-      <p class="text-gray-700 mb-4">Handmade lavender-themed candle holder.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹699</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="candle_6.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Sugar Plum Candle</h3>
+      <p class="text-gray-700 mb-3">Sweet plum and vanilla swirl together for a festive delight.</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐☆</span>
+        <span class="text-sm text-gray-600 ml-2">(4.3)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹129</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
       </div>
     </div>
+
   </div>
 </section>
-
 
 <!--row3-->
 <section class="max-w-7xl mx-auto px-6 py-12">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+
     <!-- Product Card 1 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="lamp_3.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Handcrafted Wooden Vase</h3>
-      <p class="text-gray-700 mb-4">Elegant natural wood finish perfect for decor.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹1,299</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <!-- Wishlist Heart -->
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="candle_7.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Rosewood Bliss Candle</h3>
+      <p class="text-gray-700 mb-3">A romantic fusion of rose and woody undertones, soft and inviting.</p>
+
+      <!-- ⭐ Rating -->
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐☆</span>
+        <span class="text-sm text-gray-600 ml-2">(4.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹199</div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
       </div>
     </div>
 
     <!-- Product Card 2 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="lamp_4.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Ceramic Lavender Pot</h3>
-      <p class="text-gray-700 mb-4">Smooth ceramic pot with pastel lavender glaze.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹899</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="lamp_1.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">GlowMist Lamp</h3>
+      <p class="text-gray-700 mb-3">Emits a soothing pastel glow ideal for cozy evenings and calm moods.</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(5.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹399</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
       </div>
     </div>
 
     <!-- Product Card 3 -->
-    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <img src="lamp_5.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
-      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Vintage Candle Holder</h3>
-      <p class="text-gray-700 mb-4">Handmade lavender-themed candle holder.</p>
-      <div class="text-[#4B2E83] font-bold text-xl mb-3">₹699</div>
-      <div style="display: inline-block; width: 100%; gap: 10px;">
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full mb-2">
-        Add to Cart
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
       </button>
-      <button class="bg-[#B57EDC] hover:bg-[#A26ED0] text-white px-5 py-2 rounded-xl font-medium transition duration-200 w-full">
-        Buy Now
-      </button>
+
+      <img src="lamp_2.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Crystal Curve Lamp</h3>
+      <p class="text-gray-700 mb-3">Transparent glass base with warm light — elegance in every corner.</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(4.3)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹599</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
       </div>
     </div>
+
+  </div>
+</section>
+ 
+<!--row4-->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Product Card 1 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <!-- Wishlist Heart -->
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="lamp_3.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Halo Beam Lamp</h3>
+      <p class="text-gray-700 mb-3">A sleek circular design that adds a futuristic touch to your room</p>
+
+      <!-- ⭐ Rating -->
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(5.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹529</div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="lamp_4.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Opal Dream Lamp</h3>
+      <p class="text-gray-700 mb-3">Frosted glass lamp radiating luxury and calmness</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(5.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹899</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="lamp_5.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Magic Orb Lamp</h3>
+      <p class="text-gray-700 mb-3">Color-changing orb that sets the perfect mood lighting.</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐☆</span>
+        <span class="text-sm text-gray-600 ml-2">(4.3)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹599</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
   </div>
 </section>
 
+ <footer class="mt-6 bg-lavenderBg text-grayText py-10">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+    <!-- Branding & Tagline -->
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <!-- Logo/Placeholder -->
+        <div class="w-9 h-9 bg-softPurple rounded-lg flex items-center justify-center shadow-lavender">
+          <span class="text-deepLavender font-bold text-lg">🛋</span>
+        </div>
+        <span class="text-xl font-extrabold text-deepLavender tracking-wider">THE COZY CORNER</span>
+      </div>
+      <p class="mb-3 text-sm">Bringing art & warmth into every corner.</p>
+      <!-- Social Icons -->
+      <div class="flex gap-4 mt-3">
+        <a href="#" aria-label="Facebook" class="hover:text-softPurple">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h4V12h3.642L21 8H13V6c0-.796.378-1 1-1h7V1h-7c-4.336 0-5 2.15-5 6v1z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="hover:text-softPurple">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.36a9.05 9.05 0 0 1-2.88 1.1A4.48 4.48 0 0 0 16.37 0c-2.69 0-4.88 2.19-4.88 4.88 0 .38.04.76.12 1.12A13.03 13.03 0 0 1 2.28.66a4.93 4.93 0 0 0-.66 2.47c0 1.7.87 3.21 2.19 4.1A4.42 4.42 0 0 1 1.64 6.3v.06c0 2.38 1.7 4.36 3.95 4.81a4.52 4.52 0 0 1-2.21.08 4.48 4.48 0 0 0 4.19 3.12A9.05 9.05 0 0 1 1 19.54a12.93 12.93 0 0 0 7 2.05c8.26 0 12.77-6.84 12.77-12.77 0-.2 0-.39-.01-.58A9.1 9.1 0 0 0 23 3"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="hover:text-softPurple">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.5 19h-3V9h3v10zm-1.5-11.25c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5 11.25h-3v-5.5c0-1.1-.9-2-2-2s-2 .9-2 2v5.5h-3V9h3v1.18c.46-.63 1.34-1.18 2.24-1.18 1.75 0 3.26 1.5 3.26 3.33v5.67z"/></svg>
+        </a>
+        <a href="#" aria-label="Mail" class="hover:text-softPurple">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4A2 2 0 0 1 22 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16zm0 2H4v.01l8 5.03 8-5.03V6zm0 2.36-8 5.01-8-5.01V18h16V8.36z"/></svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Links and Info -->
+    <div id="contact">
+      <div class="font-semibold text-deepLavender mb-2">Company</div>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-softPurple">About us</a></li>
+        <li><a href="#" class="hover:text-softPurple">Services</a></li>
+        <li><a href="#" class="hover:text-softPurple">Community</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold text-deepLavender mb-2">Support</div>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-softPurple">Help Center</a></li>
+        <li><a href="#" class="hover:text-softPurple">Feedback</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold text-deepLavender mb-2">Contact us</div>
+      <ul class="space-y-1">
+        <li class="flex items-center">
+          <span class="text-softPurple mr-1">📞</span>
+          <span>+91 91234 56789</span>
+        </li>
+        <li class="flex items-center">
+          <span class="text-softPurple mr-1">✉</span>
+          <span>hello@cozycorner.com</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-8 text-center text-xs text-grayText border-t border-gradLavender pt-6">
+    © 2025 THE COZY CORNER. All rights reserved.
+  </div>
+</footer>
  
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true, // animation happens only once
+  });
+</script>
+
  </body>
  </html>
