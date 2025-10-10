@@ -1,64 +1,67 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Cozy Corner</title>
-     <script src="https://cdn.tailwindcss.com"></script>
-     <link rel="stylesheet" href="styles.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cozy Corner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 
- </head>
- <body class=" bg-[#c9bdb9]" >
-    
-<!--nav bar--->
-<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-6 py-4 flex items-center justify-between sticky top-0 z-50">
-  <!--title -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <style>
+    /* Custom Scroll Animation for Logos */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      display: inline-flex;
+      animation: scroll 25s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#c9bdb9]">
+
+<!-- Navbar -->
+<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-6 py-4 flex items-center justify-between sticky top-0 z-50" data-aos="fade-down">
   <div class="flex items-center gap-4">
     <img src="logo.png" alt="Logo" class="w-full h-12 shadow-md">
   </div>
-
-  <!--nav-->
   <nav class="hidden md:flex gap-5 items-center text-[#1d1b19] font-medium">
     <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
-    <a href="categories" class="hover:text-[#7a3e2e] ">Categories</a>
-    <a href="#About" class="hover:text-[#7a3e2e] ">About</a>
+    <a href="#categories" class="hover:text-[#7a3e2e]">Categories</a>
+    <a href="#About" class="hover:text-[#7a3e2e]">About</a>
     <a href="#contact" class="hover:text-[#7a3e2e]">Contact</a>
   </nav>
-
-<div class="flex gap-3">
-  <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
-    <img src="cart.jpg" alt="Icon" class="w-8 h-8 object-cover">
-  </button>
-  <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
-    <img src="liked.jpg" alt="Icon" class="w-8 h-8 object-cover">
-  </button>
-</div>
-
-
-
-
-  <!-- Mobile Menu Button -->
-  <button id="mobileMenuBtn" class="md:hidden ml-4 text-xl">
-    ☰
-  </button>
+  <div class="flex gap-3">
+    <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
+      <img src="cart.jpg" alt="Icon" class="w-8 h-8 object-cover">
+    </button>
+    <button class="rounded-full overflow-hidden hover:scale-105 transition-transform">
+      <img src="liked.jpg" alt="Icon" class="w-8 h-8 object-cover">
+    </button>
+  </div>
+  <button id="mobileMenuBtn" class="md:hidden ml-4 text-xl">☰</button>
 </header>
 
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 text-[#1d1b19] dark:text-gray-200 px-6 py-4 flex flex-col gap-4">
-  <a href="index.html" class="hover:text-[#7a3e2e] ">Home</a>
+<div id="mobileMenu" class="hidden md:hidden bg-white text-[#1d1b19] px-6 py-4 flex flex-col gap-4" data-aos="fade-down">
+  <a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
   <a href="#categories" class="hover:text-[#7a3e2e]">Categories</a>
   <a href="#about" class="hover:text-[#7a3e2e]">About</a>
   <a href="#contact" class="hover:text-[#7a3e2e]">Contact</a>
 </div>
 
-<!-- Lavender Search Bar -->
-<div class="w-full bg-[#f4effa] flex justify-center items-center py-6 px-4">
+<!-- Search Bar -->
+<div class="w-full bg-[#f4effa] flex justify-center items-center py-6 px-4" data-aos="fade-up">
   <div class="w-full max-w-3xl bg-white rounded-2xl shadow-md flex items-center gap-3 p-3 flex-wrap">
-    
-    <!-- Category Dropdown -->
     <select class="flex-1 min-w-[120px] border border-[#e2d9f3] rounded-xl p-2 text-[#6b5b95] focus:outline-none focus:ring-2 focus:ring-[#b388eb]">
       <option selected>All Categories</option>
       <option>Living Room</option>
@@ -67,50 +70,25 @@
       <option>Plants & Pots</option>
       <option>Lighting</option>
     </select>
-
-    <!-- Search Input -->
     <div class="relative flex-1 min-w-[150px]">
-      <input
-        type="text"
-        placeholder="Search home decor..."
-        class="w-full border border-[#e2d9f3] rounded-xl p-2 pl-10 text-[#6b5b95] focus:outline-none focus:ring-2 focus:ring-[#b388eb]"
-      />
-      <!-- Search Icon -->
+      <input type="text" placeholder="Search home decor..." class="w-full border border-[#e2d9f3] rounded-xl p-2 pl-10 text-[#6b5b95] focus:outline-none focus:ring-2 focus:ring-[#b388eb]" />
       <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-2.5 h-5 w-5 text-[#b388eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18a7.5 7.5 0 006.15-3.35z" />
       </svg>
     </div>
-
-    <!-- Filter Button -->
-    <button class="bg-[#b388eb] hover:bg-[#a06cd5] text-white font-medium px-4 py-2 rounded-xl transition">
-      Filters
-    </button>
+    <button class="bg-[#b388eb] hover:bg-[#a06cd5] text-white font-medium px-4 py-2 rounded-xl transition">Filters</button>
   </div>
 </div>
-
-
 
 <!-- Hero Section -->
 <section class="relative w-full max-w-6xl mx-auto my-10 rounded-2xl overflow-hidden shadow-lg bg-white">
   <div class="flex flex-col md:flex-row items-stretch w-full h-auto md:h-[420px]">
-    
-    <!-- Left Image -->
-    <div class="w-full md:w-1/2 bg-neutral-100 flex items-center justify-center">
-      <img 
-        src="sofa.jpg" 
-        alt="Sofa"
-        class="w-full h-[250px] md:h-full object-cover transition-transform duration-500 hover:scale-105"
-      />
+    <div class="w-full md:w-1/2 bg-neutral-100 flex items-center justify-center" data-aos="fade-right">
+      <img src="sofa.jpg" alt="Sofa" class="w-full h-[250px] md:h-full object-cover transition-transform duration-500 hover:scale-105"/>
     </div>
-
-    <!-- Right Content -->
-    <div class="w-full md:w-1/2 bg-[#3d3328] flex flex-col justify-center items-center text-center px-6 md:px-10 py-8 text-white">
-      <h3 class="text-xs md:text-base font-medium mb-3 text-neutral-300 tracking-wide">
-        Welcome to your happy shopping space
-      </h3>
-      <h1 class="text-2xl md:text-4xl font-bold mb-5 tracking-wider">
-        THE COZY CORNER
-      </h1>
+    <div class="w-full md:w-1/2 bg-[#3d3328] flex flex-col justify-center items-center text-center px-6 md:px-10 py-8 text-white" data-aos="fade-left">
+      <h3 class="text-xs md:text-base font-medium mb-3 text-neutral-300 tracking-wide">Welcome to your happy shopping space</h3>
+      <h1 class="text-2xl md:text-4xl font-bold mb-5 tracking-wider">THE COZY CORNER</h1>
       <p class="text-sm md:text-base leading-relaxed text-neutral-300 max-w-md">
         Discover a world where every product is carefully curated to bring style, convenience, and happiness straight to your doorstep — because shopping should feel effortless and exciting every single day.
       </p>
@@ -118,45 +96,27 @@
         SHOP NOW
       </button>
     </div>
-
   </div>
 </section>
 
-
-
-
-
-<!-- Professional Horizontal Infinite Logo Scroll -->
-<section class="w-full bg-white py-6 overflow-hidden">
-  <p class="text-2xl font-bold text-center justify-center text-deepLavender">Our Official Partners</p>
-
+<!-- Partners Scroll -->
+<section class="w-full bg-white py-6 overflow-hidden" data-aos="fade-up">
+  <p class="text-2xl font-bold text-center text-deepLavender">Our Official Partners</p>
   <div class="mt-7 flex items-center justify-center">
-    
     <div class="relative w-full overflow-hidden">
-      <!-- Scroll Container -->
       <div class="flex animate-scroll whitespace-nowrap">
-        <!-- Logos (repeat for seamless looping) -->
         <img src="brands1.jpg" alt="" class="h-12 mx-8 w-auto object-contain">
         <img src="brands2.jpg" alt="" class="h-12 mx-8 w-auto object-contain">
         <img src="brand3.jpg" alt="" class="h-12 mx-8 w-auto object-contain">
-
+        <img src="brands1.jpg" alt="" class="h-12 mx-8 w-auto object-contain">
+        <img src="brands2.jpg" alt="" class="h-12 mx-8 w-auto object-contain">
+        <img src="brands1.jpg" alt="" class="h-12 mx-8 w-auto object-contain">
       </div>
     </div>
   </div>
-
-  <style>
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .animate-scroll {
-      display: inline-flex;
-      animation: scroll 25s linear infinite;
-    }
-  </style>
 </section>
-  
+
+
 
 
   <script>
@@ -255,120 +215,106 @@
 
 
 
-  
-
-<section class="bg-[#f3e8ff] w-full py-10 flex justify-center">
-  <div class="bg-white max-w-4xl w-full p-6 rounded-xl shadow flex flex-col items-center">
-    <!-- Slogan & Button Row -->
-    <div class="w-full flex items-center justify-between mb-6">
-      <h1 class="text-2xl font-semibold text-[#5b3e82]">LOVE WHERE YOU LIVE</h1>
-      <button class="px-5 py-2 border border-[#bfa0ff] rounded-full text-sm text-[#5b3e82] bg-white hover:bg-[#e9d7ff] transition shadow">
-        VIEW ALL COLLECTIONS
-      </button>
-    </div>
-    <!-- Collections Grid -->
-    <div class="grid grid-cols-3 grid-rows-2 gap-4 w-full">
-      <!-- plant (Large) -->
-      <a href="plants.html"class="row-span-2 rounded-xl overflow-hidden shadow group relative">
-        <img src="plants.jpg" alt="Seating" class="w-full h-full object-cover group-hover:scale-105 transition" />
-        <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">PLANTS</span>
-      </a>
-      <!-- clay -->
-      <a href="clay.html" class="rounded-xl overflow-hidden shadow group relative">
-        <img src="clays.jpg" alt="Tables" class="w-full h-full object-cover group-hover:scale-105 transition" />
-        <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">CLAYS</span>
-      </a>
-      <!-- lamp -->
-      <a href="candle.html" class="rounded-xl overflow-hidden shadow group relative">
-        <img src="candles.jpg" alt="Lighting" class="w-full h-full object-cover group-hover:scale-105 transition" />
-        <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">CANDLES & LAMPS</span>
-      </a>
-      <!-- wall -->
-      <a href="wall.html" class="rounded-xl overflow-hidden shadow group relative">
-        <img src="walls.jpg" alt="Accessories" class="w-full h-full object-cover group-hover:scale-105 transition" />
-        <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">WALL HANGINGS</span>
-      </a>
-      <!-- festive -->
-      <a href="festive.html" class="rounded-xl overflow-hidden shadow group relative">
-        <img src="festives.jpg" alt="Lighting" class="w-full h-full object-cover group-hover:scale-105 transition" />
-        <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">FESTIVE COLLECTION</span>
-      </a>
-    </div>
-  </div>
+<section id="categories" class="bg-[#f3e8ff] w-full py-10 flex justify-center">
+   <div class="bg-white max-w-4xl w-full p-6 rounded-xl shadow flex flex-col items-center"> 
+    <!-- Slogan & Button Row --> 
+     <div class="w-full flex items-center justify-between mb-6"> 
+      <h1 class="text-2xl font-semibold text-[#5b3e82]">LOVE WHERE YOU LIVE</h1> 
+      <button class="px-5 py-2 border border-[#bfa0ff] rounded-full text-sm text-[#5b3e82] bg-white hover:bg-[#e9d7ff] transition shadow"> 
+        VIEW ALL COLLECTIONS </button> </div> <!-- Collections Grid --> <div class="grid grid-cols-3 grid-rows-2 gap-4 w-full"> 
+          <!-- plant (Large) --> <a href="plants.html"class="row-span-2 rounded-xl overflow-hidden shadow group relative"> 
+            <img src="plants.jpg" alt="Seating" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
+            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">PLANTS</span> 
+            </a> <!-- clay --> <a href="clay.html" class="rounded-xl overflow-hidden shadow group relative"> 
+            <img src="clays.jpg" alt="Tables" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
+            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">CLAYS</span> 
+          </a> <!-- lamp --> <a href="candle.html" class="rounded-xl overflow-hidden shadow group relative"> 
+            <img src="candles.jpg" alt="Lighting" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
+            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">CANDLES & LAMPS</span> 
+          </a> <!-- wall --> <a href="wall.html" class="rounded-xl overflow-hidden shadow group relative"> 
+            <img src="walls.jpg" alt="Accessories" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
+            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">WALL HANGINGS</span> 
+          </a> <!-- festive --> <a href="festive.html" class="rounded-xl overflow-hidden shadow group relative"> 
+            <img src="festives.jpg" alt="Lighting" class="w-full h-full object-cover group-hover:scale-105 transition" /> 
+            <span class="absolute left-4 bottom-4 text-white text-lg font-semibold bg-[#5b3e82] bg-opacity-50 px-3 py-1 rounded">FESTIVE COLLECTION</span>
+           </a> 
+      </div> 
+    </div> 
 </section>
 
-
-
-<!-- Guidelines -->
-<section id="About" class="p-6 md:p-10 bg-gradient-to-br from-[#f3e8ff] to-[#e9d7ff] animate-on-scroll rounded-xl mx-4 md:mx-16 my-8 shadow-lg">
+<!-- About / Guidelines -->
+<section id="About" class="p-6 md:p-10 bg-gradient-to-br from-[#f3e8ff] to-[#e9d7ff] rounded-xl mx-4 md:mx-16 my-8 shadow-lg" data-aos="fade-up">
   <h2 class="section-title text-center text-3xl font-semibold mb-10 text-[#5b3e82]">Why Choose Us ?</h2>
-
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
-    
-    <!-- Step 1 -->
-    <div class="guide-step bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+    <div class="guide-step bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
       <img src="delivery.jpg" alt="Search Icon" class="w-16 h-16 mx-auto mb-4">
       <h3 class="text-[#5b3e82] text-xl font-semibold md:text-2xl">Fast & Free Delivery</h3>
       <p class="text-[#5b3e82] text-sm md:text-base">Enjoy Free Shipping on All Purchases</p>
     </div>
-
-    <!-- Step 2 -->
-    <div class="guide-step bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+    <div class="guide-step bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
       <img src="best.jpg" alt="Location Icon" class="w-16 h-16 mx-auto mb-4">
       <h3 class="text-[#5b3e82] text-xl font-semibold md:text-2xl">Easy to Buy</h3>
       <p class="text-[#5b3e82] text-sm md:text-base">Effortless Shopping, Every Time</p>
     </div>
-
-    <!-- Step 3 -->
-    <div class="guide-step bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+    <div class="guide-step bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
       <img src="time.jpg" alt="Education Icon" class="w-16 h-16 mx-auto mb-4">
       <h3 class="text-[#5b3e82] text-xl font-semibold md:text-2xl">24/7 Support</h3>
       <p class="text-[#5b3e82] text-sm md:text-base">Assistance Whenever You Need</p>
     </div>
-
-    <!-- Step 4 -->
-    <div class="guide-step bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+    <div class="guide-step bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
       <img src="quality.jpg" alt="AI Icon" class="w-16 h-16 mx-auto mb-4">
       <h3 class="text-[#5b3e82] text-xl font-semibold md:text-2xl">Best Quality</h3>
       <p class="text-[#5b3e82] text-sm md:text-base">Premium Standards, Guaranteed</p>
     </div>
-
-
   </div>
 </section>
 
 
+  <section id="contact" class="py-20 bg-white text-center">
+    <h2 class="text-3xl section-title mb-8" data-aos="fade-up">Get in Touch</h2>
+    <p class="text-gray-700 mb-6" data-aos="fade-up" data-aos-delay="100">
+      Have questions or want custom decor suggestions? We’d love to hear from you.
+    </p>
+    <form class="max-w-lg mx-auto space-y-4" data-aos="fade-up" data-aos-delay="200">
+      <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#7b5ea7]">
+      <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#7b5ea7]">
+      <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#7b5ea7]"></textarea>
+      <button class="bg-[#5b3e82] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#7b5ea7]">Send Message</button>
+    </form>
+  </section>
 
-<footer class="mt-6 bg-lavenderBg text-grayText py-10">
+<!-- Footer -->
+<footer class="mt-6 bg-lavenderBg text-grayText py-10" data-aos="fade-up">
   <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-start gap-8">
     <!-- Branding & Tagline -->
     <div>
       <div class="flex items-center gap-2 mb-4">
-        <!-- Logo/Placeholder -->
         <div class="w-9 h-9 bg-softPurple rounded-lg flex items-center justify-center shadow-lavender">
           <span class="text-deepLavender font-bold text-lg">🛋</span>
         </div>
         <span class="text-xl font-extrabold text-deepLavender tracking-wider">THE COZY CORNER</span>
       </div>
       <p class="mb-3 text-sm">Bringing art & warmth into every corner.</p>
-      <!-- Social Icons -->
-      <div class="flex gap-4 mt-3">
-        <a href="#" aria-label="Facebook" class="hover:text-softPurple">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h4V12h3.642L21 8H13V6c0-.796.378-1 1-1h7V1h-7c-4.336 0-5 2.15-5 6v1z"/></svg>
-        </a>
-        <a href="#" aria-label="Twitter" class="hover:text-softPurple">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.36a9.05 9.05 0 0 1-2.88 1.1A4.48 4.48 0 0 0 16.37 0c-2.69 0-4.88 2.19-4.88 4.88 0 .38.04.76.12 1.12A13.03 13.03 0 0 1 2.28.66a4.93 4.93 0 0 0-.66 2.47c0 1.7.87 3.21 2.19 4.1A4.42 4.42 0 0 1 1.64 6.3v.06c0 2.38 1.7 4.36 3.95 4.81a4.52 4.52 0 0 1-2.21.08 4.48 4.48 0 0 0 4.19 3.12A9.05 9.05 0 0 1 1 19.54a12.93 12.93 0 0 0 7 2.05c8.26 0 12.77-6.84 12.77-12.77 0-.2 0-.39-.01-.58A9.1 9.1 0 0 0 23 3"/></svg>
-        </a>
-        <a href="#" aria-label="LinkedIn" class="hover:text-softPurple">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.5 19h-3V9h3v10zm-1.5-11.25c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5 11.25h-3v-5.5c0-1.1-.9-2-2-2s-2 .9-2 2v5.5h-3V9h3v1.18c.46-.63 1.34-1.18 2.24-1.18 1.75 0 3.26 1.5 3.26 3.33v5.67z"/></svg>
-        </a>
-        <a href="#" aria-label="Mail" class="hover:text-softPurple">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4A2 2 0 0 1 22 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16zm0 2H4v.01l8 5.03 8-5.03V6zm0 2.36-8 5.01-8-5.01V18h16V8.36z"/></svg>
-        </a>
+      <div class="flex gap-4 mt-3"> 
+          <a href="#" aria-label="Facebook" class="hover:text-softPurple"> 
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 8H6v4h3v12h4V12h3.642L21 8H13V6c0-.796.378-1 1-1h7V1h-7c-4.336 0-5 2.15-5 6v1z"/></svg> 
+            </a> 
+          <a href="#" aria-label="Twitter" class="hover:text-softPurple"> 
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.36a9.05 9.05 0 0 1-2.88 1.1A4.48 4.48 0 0 0 16.37 0c-2.69 0-4.88 2.19-4.88 4.88 0 .38.04.76.12 1.12A13.03 13.03 0 0 1 2.28.66a4.93 4.93 0 0 0-.66 2.47c0 1.7.87 3.21 2.19 4.1A4.42 4.42 0 0 1 1.64 6.3v.06c0 2.38 1.7 4.36 3.95 4.81a4.52 4.52 0 0 1-2.21.08 4.48 4.48 0 0 0 4.19 3.12A9.05 9.05 0 0 1 1 19.54a12.93 12.93 0 0 0 7 2.05c8.26 0 12.77-6.84 12.77-12.77 0-.2 0-.39-.01-.58A9.1 9.1 0 0 0 23 3"/></svg> 
+            </a>
+            <a href="#" aria-label="LinkedIn" class="hover:text-softPurple">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.5 19h-3V9h3v10zm-1.5-11.25c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5 11.25h-3v-5.5c0-1.1-.9-2-2-2s-2 .9-2 2v5.5h-3V9h3v1.18c.46-.63 1.34-1.18 2.24-1.18 1.75 0 3.26 1.5 3.26 3.33v5.67z"/></svg> 
+            </a> 
+            <a href="#" aria-label="Mail" class="hover:text-softPurple">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4A2 2 0 0 1 22 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16zm0 2H4v.01l8 5.03 8-5.03V6zm0 2.36-8 5.01-8-5.01V18h16V8.36z"/></svg>
+            </a> 
+        </div>  
       </div>
-    </div>
-    
-    <!-- Links and Info -->
+    <!-- Contact Links -->
     <div id="contact">
       <div class="font-semibold text-deepLavender mb-2">Company</div>
       <ul class="space-y-1">
@@ -387,14 +333,8 @@
     <div>
       <div class="font-semibold text-deepLavender mb-2">Contact us</div>
       <ul class="space-y-1">
-        <li class="flex items-center">
-          <span class="text-softPurple mr-1">📞</span>
-          <span>+91 91234 56789</span>
-        </li>
-        <li class="flex items-center">
-          <span class="text-softPurple mr-1">✉</span>
-          <span>hello@cozycorner.com</span>
-        </li>
+        <li class="flex items-center"><span class="text-softPurple mr-1">📞</span>+91 91234 56789</li>
+        <li class="flex items-center"><span class="text-softPurple mr-1">✉</span>hello@cozycorner.com</li>
       </ul>
     </div>
   </div>
@@ -403,11 +343,18 @@
   </div>
 </footer>
 
-  
-
+<!-- Scripts -->
 <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true, // animation happens only once
+  });
+</script>
+</body>
+</html>
 
 
- </body>
- </html>
+
 
