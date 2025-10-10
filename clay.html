@@ -1,80 +1,484 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interior Mood Board</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#f3e8ff]">
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Corner</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="styles.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+<!-- AOS Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-  <!-- Main Container -->
-  <div class="max-w-4xl mx-auto py-8 space-y-12">
+ </head>
+ <body>
     
-    <!-- Section 1 -->
-    <div class="bg-[#e9d7ff] rounded-lg p-6 grid grid-cols-3 gap-4">
-      <div class="bg-[#d7bfff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item1" class="rounded">
-        <div class="text-xs text-[#5b3e82]">소프스 플러피 북 유닛체어</div>
-      </div>
-      <div class="bg-[#f0e6ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item2" class="rounded">
-        <div class="text-xs text-[#5b3e82]">코지 라운드 버터체어 소파</div>
-      </div>
-      <div class="bg-[#e6d7ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item3" class="rounded">
-        <div class="text-xs text-[#5b3e82]">라탄느네 스타일 악센트체어</div>
-      </div>
-    </div>
     
-    <!-- Section 2 -->
-    <div class="bg-[#f3e8ff] rounded-lg p-6 grid grid-cols-3 gap-4">
-      <div class="bg-[#e6d7ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item4" class="rounded">
-        <div class="text-xs text-[#5b3e82]">보헤미안 쿠션</div>
-      </div>
-      <div class="bg-[#f0e6ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item5" class="rounded">
-        <div class="text-xs text-[#5b3e82]">Feather Soft Velvet Style</div>
-      </div>
-      <div class="bg-[#e9d7ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item6" class="rounded">
-        <div class="text-xs text-[#5b3e82]">깔끔 정리 바디필로우</div>
-      </div>
-    </div>
-    
-    <!-- Section 3 -->
-    <div class="bg-[#e9d7ff] rounded-lg p-6 grid grid-cols-3 gap-4">
-      <div class="bg-[#f0e6ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item7" class="rounded">
-        <div class="text-xs text-[#5b3e82]">V형베개 멀티쿠션</div>
-      </div>
-      <div class="bg-[#e6d7ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item8" class="rounded">
-        <div class="text-xs text-[#5b3e82]">푹신한 디테일 쿠션러그</div>
-      </div>
-      <div class="bg-[#f3e8ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item9" class="rounded">
-        <div class="text-xs text-[#5b3e82]">리브 쉐 라운지 쇼파</div>
-      </div>
-    </div>
-    
-    <!-- Section 4 -->
-    <div class="bg-[#f3e8ff] rounded-lg p-6 grid grid-cols-3 gap-4">
-      <div class="bg-[#e9d7ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item10" class="rounded">
-        <div class="text-xs text-[#5b3e82]">해피 빈 미니의자</div>
-      </div>
-      <div class="bg-[#f0e6ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item11" class="rounded">
-        <div class="text-xs text-[#5b3e82]">달링 베이직 티크 우드보울</div>
-      </div>
-      <div class="bg-[#e6d7ff] rounded-lg shadow p-4 flex flex-col items-center space-y-2">
-        <img src="https://via.placeholder.com/120x100" alt="item12" class="rounded">
-        <div class="text-xs text-[#5b3e82]">소소한 우드미니 서바이벌 키트</div>
-      </div>
-    </div>
-  
+<!--nav bar--->
+<header class="w-full bg-gradient-to-t from-[#dc97ff] to-[#c9bdb9] border-b border-[#efe8df] px-4 sm:px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+  <div class="flex items-center gap-3">
+    <img src="logo.png" alt="Logo" class="h-10 sm:h-12 w-auto" />
   </div>
-</body>
-</html>
+
+  <!-- Desktop Nav -->
+  <nav class="hidden md:flex gap-5 items-center text-[#1d1b19] font-medium">
+    <a href="index.html" class="hover:text-[#7a3e2e]">Home•</a>
+    <a href="candle.html" class="hover:text-[#7a3e2e]">Candles•</a>
+    <a href="walls.html" class="hover:text-[#7a3e2e]">Modern Mirrors•</a>
+    <a href="festive.html" class="hover:text-[#7a3e2e]">Wall Shelves•</a>
+    <a href="plants.html" class="hover:text-[#7a3e2e]">Plants</a>
+  </nav>
+
+  <!-- Icons -->
+  <div class="flex items-center gap-3">
+    <button class="text-gray-500 hover:text-red-500 text-2xl">❤️</button>
+    <button class="text-gray-500 hover:text-[#7a3e2e] text-2xl">🛒</button>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl focus:outline-none">☰</button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white text-[#1d1b19] px-6 py-4 flex flex-col gap-4 shadow-md">
+<a href="index.html" class="hover:text-[#7a3e2e]">Home</a>
+    <a href="candle.html" class="hover:text-[#7a3e2e]">Candles</a>
+    <a href="walls.html" class="hover:text-[#7a3e2e]">Modern Mirrors</a>
+    <a href="festive.html" class="hover:text-[#7a3e2e]">Wall Shelves</a>
+    <a href="plants.html" class="hover:text-[#7a3e2e]">Plants</a>
+</div>
+
+
+<section class="w-full bg-white py-6 overflow-hidden">
+   <div class="mt-7 flex items-center justify-center">
+    
+    <div class="relative w-full overflow-hidden">
+      <!-- Scroll Container -->
+      <div class="flex animate-scroll whitespace-nowrap">
+        <!-- Logos (repeat for seamless looping) -->
+        <img src="Banner_1.png" alt="Partner 1" class="h-20 mx-10">
+        <img src="Banner_2.png" alt="Partner 2" class="h-20 mx-10">
+        <img src="Banner_3.png" alt="Partner 3" class="h-20 mx-10">
+        <img src="Banner_4.png" alt="Partner 4" class="h-20 mx-10">
+    </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-scroll {
+      display: inline-flex;
+      animation: scroll 25s linear infinite;
+    }
+  </style>
+</section>
+  
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 text-[#1d1b19] dark:text-gray-200 px-6 py-4 flex flex-col gap-4">
+  <a href="index.html" class="hover:text-[#7a3e2e] ">Home</a>
+  <a href="#categories" class="hover:text-[#7a3e2e]">Categories</a>
+  <a href="#about" class="hover:text-[#7a3e2e]">About</a>
+  <a href="#contact" class="hover:text-[#7a3e2e]">Contact</a>
+</div>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!--row1-->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Product Card 1 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <!-- Wishlist Heart -->
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_1.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Minimalist Ceramic Mug Set</h3>
+      <p class="text-gray-700 mb-3">Bring modern charm to teatime with this beautifully crafted striped porcelain duo, perfect for relaxing moments or sharing with friends.</p>
+
+      <!-- ⭐ Rating -->
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(4.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹199</div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_2.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Classic Floral Cup & Saucer </h3>
+      <p class="text-gray-700 mb-3">Experience timeless elegance with this classic floral-printed cup and saucer, ideal for savoring your morning coffee or an evening tea.</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(3.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹179</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_3.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Classic Floral Cup & Saucer </h3>
+      <p class="text-gray-700 mb-3">Experience timeless elegance with this classic floral-printed cup and saucer, ideal for savoring your morning coffee or an evening tea.</p>
+
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(5.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹159</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--row2-->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Product Card 1 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <!-- Wishlist Heart -->
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_4.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Cozy Owl Night Lamp </h3>
+      <p class="text-gray-700 mb-3">A charming owl-shaped night lamp that adds warmth and whimsy to any room.</p>
+      <!-- ⭐ Rating -->
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(4.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹1,199</div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_5.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Elegant Fox Accent Light</h3>
+      <p class="text-gray-700 mb-3">A sleek fox-shaped accent light that brings a touch of sophistication and warmth.</p>
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(5.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹1,399</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_6.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Dreamy Cat Night Light</h3>
+      <p class="text-gray-700 mb-3">A whimsical cat-shaped night light that creates a cozy ambiance.</p>
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(5.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹1,799</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--row3-->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Product Card 1 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <!-- Wishlist Heart -->
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_7.jpg" alt="Product 1" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Elegant Dried Floral Vase </h3>
+      <p class="text-gray-700 mb-3">A sophisticated vase filled with preserved flowers, perfect for adding a touch of nature and elegance to any space.</p>
+      <!-- ⭐ Rating -->
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(4.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹890</div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_8.jpg" alt="Product 2" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Blossoming Branch Vase</h3>
+      <p class="text-gray-700 mb-3">A tall vase showcasing delicate faux blossoms, ideal for brightening up any room with a touch of springtime beauty.</p>
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(4.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹1,099</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-[#EADCF8] rounded-2xl shadow-md p-6 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-300 text-2xl">
+        ❤️
+      </button>
+
+      <img src="clay_9.jpg" alt="Product 3" class="rounded-xl mb-5 w-full h-64 object-cover">
+      <h3 class="text-2xl font-semibold text-[#4B2E83] mb-2">Minimalist Single Stem Vase </h3>
+      <p class="text-gray-700 mb-3">A sleek vase designed for a single flower or branch, perfect for a modern and understated look.</p>
+      <div class="flex items-center mb-3">
+        <span class="text-yellow-400 text-xl">⭐⭐⭐⭐</span>
+        <span class="text-sm text-gray-600 ml-2">(4.0)</span>
+      </div>
+
+      <div class="text-[#4B2E83] font-bold text-xl mb-4">₹699</div>
+
+      <div class="flex flex-col items-center gap-4 w-full">
+        <div class="flex justify-center gap-4 w-full">
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            🛒 Add to Cart
+          </button>
+          <button class="bg-[#B57EDC] hover:bg-[#A26ED0] hover:scale-105 text-white px-6 py-2 rounded-xl font-medium transition duration-200 w-40">
+            💜 Wishlist
+          </button>
+        </div>
+        <button class="bg-gradient-to-r from-[#B57EDC] to-[#A26ED0] hover:opacity-90 text-white px-6 py-2 rounded-xl font-semibold transition duration-200 w-80">
+          ⚡ Buy Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+ <footer class="mt-6 bg-lavenderBg text-grayText py-10">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+    <!-- Branding & Tagline -->
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <!-- Logo/Placeholder -->
+        <div class="w-9 h-9 bg-softPurple rounded-lg flex items-center justify-center shadow-lavender">
+          <span class="text-deepLavender font-bold text-lg">🛋</span>
+        </div>
+        <span class="text-xl font-extrabold text-deepLavender tracking-wider">THE COZY CORNER</span>
+      </div>
+      <p class="mb-3 text-sm">Bringing art & warmth into every corner.</p>
+      <!-- Social Icons -->
+      <div class="flex gap-4 mt-3">
+        <a href="#" aria-label="Facebook" class="hover:text-softPurple">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h4V12h3.642L21 8H13V6c0-.796.378-1 1-1h7V1h-7c-4.336 0-5 2.15-5 6v1z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="hover:text-softPurple">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.36a9.05 9.05 0 0 1-2.88 1.1A4.48 4.48 0 0 0 16.37 0c-2.69 0-4.88 2.19-4.88 4.88 0 .38.04.76.12 1.12A13.03 13.03 0 0 1 2.28.66a4.93 4.93 0 0 0-.66 2.47c0 1.7.87 3.21 2.19 4.1A4.42 4.42 0 0 1 1.64 6.3v.06c0 2.38 1.7 4.36 3.95 4.81a4.52 4.52 0 0 1-2.21.08 4.48 4.48 0 0 0 4.19 3.12A9.05 9.05 0 0 1 1 19.54a12.93 12.93 0 0 0 7 2.05c8.26 0 12.77-6.84 12.77-12.77 0-.2 0-.39-.01-.58A9.1 9.1 0 0 0 23 3"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="hover:text-softPurple">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.5 19h-3V9h3v10zm-1.5-11.25c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5 11.25h-3v-5.5c0-1.1-.9-2-2-2s-2 .9-2 2v5.5h-3V9h3v1.18c.46-.63 1.34-1.18 2.24-1.18 1.75 0 3.26 1.5 3.26 3.33v5.67z"/></svg>
+        </a>
+        <a href="#" aria-label="Mail" class="hover:text-softPurple">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4A2 2 0 0 1 22 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16zm0 2H4v.01l8 5.03 8-5.03V6zm0 2.36-8 5.01-8-5.01V18h16V8.36z"/></svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Links and Info -->
+    <div id="contact">
+      <div class="font-semibold text-deepLavender mb-2">Company</div>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-softPurple">About us</a></li>
+        <li><a href="#" class="hover:text-softPurple">Services</a></li>
+        <li><a href="#" class="hover:text-softPurple">Community</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold text-deepLavender mb-2">Support</div>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-softPurple">Help Center</a></li>
+        <li><a href="#" class="hover:text-softPurple">Feedback</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold text-deepLavender mb-2">Contact us</div>
+      <ul class="space-y-1">
+        <li class="flex items-center">
+          <span class="text-softPurple mr-1">📞</span>
+          <span>+91 91234 56789</span>
+        </li>
+        <li class="flex items-center">
+          <span class="text-softPurple mr-1">✉</span>
+          <span>hello@cozycorner.com</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-8 text-center text-xs text-grayText border-t border-gradLavender pt-6">
+    © 2025 THE COZY CORNER. All rights reserved.
+  </div>
+</footer>
+ 
+
+<script src="script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true, // animation happens only once
+  });
+</script>
+ </body>
+ </html>
