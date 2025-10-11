@@ -117,42 +117,7 @@
 
 
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            deepLavender: '#5b3e82',
-            softPurple: '#bfa0ff',
-            lavenderBg: '#f3e8ff',
-            gradLavender: '#e9d7ff',
-            white: '#ffffff',
-            grayText: '#5c5c5c',
-            pinkLavender: '#f9f3ff',
-            shadowGray: '#dcd0f0',
-            beige:'#b08968',
-            brown:'#362312',
-            lavgrey:'#b3a39a',
-          },
-          boxShadow: {
-            lavender: '0 4px 32px 0 #dcd0f0',
-          },
-          fontFamily: {
-            inter: ['Inter', 'sans-serif'],
-          },
-          keyframes: {
-            slidein: {
-              '0%': { opacity: '0', transform: 'translateY(30px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' }
-            }
-          },
-          animation: {
-            slidein: 'slidein 0.7s ease',
-          }
-        }
-      }
-    }
-  </script>
+ 
 <section class=" w-full relative overflow-hidden">
   <!-- Slideshow wrapper -->
   <div id="carousel" class="relative w-full h-[200px] md:h-[400px] lg:h-[400px]">
@@ -210,6 +175,44 @@
     </div>
   </div>
 </section>
+
+
+ <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepLavender: '#5b3e82',
+            softPurple: '#bfa0ff',
+            lavenderBg: '#f3e8ff',
+            gradLavender: '#e9d7ff',
+            white: '#ffffff',
+            grayText: '#5c5c5c',
+            pinkLavender: '#f9f3ff',
+            shadowGray: '#dcd0f0',
+            beige:'#b08968',
+            brown:'#362312',
+            lavgrey:'#b3a39a',
+          },
+          boxShadow: {
+            lavender: '0 4px 32px 0 #dcd0f0',
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          keyframes: {
+            slidein: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            slidein: 'slidein 0.7s ease',
+          }
+        }
+      }
+    }
+  </script>
 
 
 <section id="categories" class="bg-[#f3e8ff] w-full py-10 flex justify-center">
@@ -363,6 +366,7 @@
 
 </body>
 </html>
+
 
 
 
